@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "Floatline",
+  "version": "1.0.0",
+  "description": "Floating Picture in Picture with captions for compatible HTML5 video players.",
+  "icons": {
+    "16": "icons/icon.svg",
+    "32": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "128": "icons/icon.svg",
+    "256": "icons/icon.svg",
+    "512": "icons/icon.svg"
+  },
+  "action": {
+    "default_title": "Floatline",
+    "default_icon": "icons/toolbar.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.disneyplus.com/*",
+        "https://*.netflix.com/*",
+        "https://*.primevideo.com/*",
+        "https://tv.apple.com/*"
+      ],
+      "js": [
+        "skip-intro.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "https://*.netflix.com/*"
+      ],
+      "js": [
+        "seek-bridge.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "i18n.js",
+        "playback.js",
+        "auto-captions.js",
+        "captions.js",
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "nativeMessaging"
+  ]
+}

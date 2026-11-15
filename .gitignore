@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Xcode build output and per-user state
+app/build/
+app/build.noindex/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
+# Node
+node_modules/

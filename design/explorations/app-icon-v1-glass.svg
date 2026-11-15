@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B2B5E"/>
+      <stop offset="0.55" stop-color="#2A4FB8"/>
+      <stop offset="1" stop-color="#36B6D9"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#sheen)"/>
+  <!-- soft shadow under the floating window -->
+  <rect x="250" y="300" width="524" height="330" rx="64" fill="#0A1433" opacity="0.28"/>
+  <!-- floating glass window -->
+  <rect x="236" y="262" width="552" height="344" rx="64" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="10"/>
+  <path d="M470 362 L470 506 L590 434 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="18" stroke-linejoin="round"/>
+  <!-- the caption line that travels with the video -->
+  <rect x="322" y="690" width="380" height="40" rx="20" fill="#FFFFFF" opacity="0.95"/>
+</svg>
